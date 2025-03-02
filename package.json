@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-wazend",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "API no oficial de WhatsApp",
   "keywords": [
     "n8n-community-node-package"
