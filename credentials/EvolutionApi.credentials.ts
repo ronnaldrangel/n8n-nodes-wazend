@@ -7,8 +7,8 @@ import {
 
 export class EvolutionApi implements ICredentialType {
 	name = 'evolutionApi';
-	displayName = 'Evolution API';
-	documentationUrl = 'https://doc.evolution-api.com/pt';
+	displayName = 'Wazend API';
+	documentationUrl = 'https://docs.wazend.net/wazend';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Server Url',
@@ -16,7 +16,7 @@ export class EvolutionApi implements ICredentialType {
 			type: 'string',
 			default: '',
 			placeholder: 'https://exemplo.com',
-			description: 'Digite a URL completa da sua Evolution API (ex: https://api.exemplo.com)',
+			description: 'Ingrese la URL completa de su Wazend API (default: https://api2.wazend.net)',
 		},
 		{
 			displayName: 'ApiKey',
@@ -26,7 +26,7 @@ export class EvolutionApi implements ICredentialType {
 			typeOptions: {
 				password: true,
 			},
-			description: 'Digite a ApiKey da Instancia ou Global da sua Evolution API',
+			description: 'Ingrese la ApiKey de la instancia de su Wazend API',
 		},
 	];
 
