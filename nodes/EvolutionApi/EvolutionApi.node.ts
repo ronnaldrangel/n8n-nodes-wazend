@@ -16,9 +16,9 @@ export class EvolutionApi implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Evolution API',
+		description: 'Interact with Wazend API',
 		defaults: {
-			name: 'Evolution API',
+			name: 'Wazend API',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
@@ -29,7 +29,7 @@ export class EvolutionApi implements INodeType {
 			},
 		],
 		requestDefaults: {
-			baseURL: 'https://doc.evolution-api.com/api-reference',
+			baseURL: 'https://docs.wazend.net/wazend',
 			url: '',
 			headers: {
 				Accept: 'application/json',

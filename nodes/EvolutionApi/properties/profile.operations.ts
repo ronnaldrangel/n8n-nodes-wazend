@@ -59,6 +59,6 @@ export const profileOperationsOptions: INodeProperties = {
             description: 'Actualiza las configuraciones de privacidad de la instancia',
             action: 'Actualizar configuraciones de privacidad',
         },
-    ],    
+    ],     
     default: 'fetch-profile',
 };

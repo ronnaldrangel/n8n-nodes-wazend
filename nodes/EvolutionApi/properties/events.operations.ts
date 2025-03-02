@@ -12,22 +12,22 @@ export const eventsOperationsOptions: INodeProperties = {
 		},
 	},
 	options: [
-		// Opção = Enviar mensagem de Texto
+		// Opción = Enviar mensaje de Texto
 		{
 			// Set/find Webhook
 			name: 'Webhook',
 			action: 'Webhook',
-			description: 'Define/Busca integração com Webhook',
+			description: 'Define/Busca integración con Webhook',
 			value: 'webhook',
 		},
 		{
 			// Set/find Rabbitmq
 			name: 'RabbitMQ',
 			action: 'Rabbitmq',
-			description: 'Define/Busca integração com RabbitMQ',
+			description: 'Define/Busca integración con RabbitMQ',
 			value: 'rabbitmq',
 		},
-	],
+	],	
 	// Definindo como padrão a opção "Enviar Texto"
 	default: 'webhook',
 };

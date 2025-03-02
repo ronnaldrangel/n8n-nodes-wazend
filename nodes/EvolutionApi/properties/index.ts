@@ -24,7 +24,7 @@ const resourcesOptions: INodeProperties = {
 			value: 'instances-api',
 		},
 		{
-			name: 'Mensagem',
+			name: 'Mensaje',
 			value: 'messages-api',
 		},
 		{
@@ -44,10 +44,10 @@ const resourcesOptions: INodeProperties = {
 			value: 'events-api',
 		},
 		{
-			name: 'Integração',
+			name: 'Integración',
 			value: 'integrations-api',
 		},
-	],
+	],	
 	default: 'instances-api',
 };
 
