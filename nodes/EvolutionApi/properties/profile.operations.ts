@@ -1,7 +1,7 @@
 import { INodeProperties } from 'n8n-workflow';
 
 export const profileOperationsOptions: INodeProperties = {
-    displayName: 'Operação',
+    displayName: 'Operacion',
     name: 'operation',
     type: 'options',
     noDataExpression: true,

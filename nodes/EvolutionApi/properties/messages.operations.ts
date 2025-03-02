@@ -2,7 +2,7 @@ import { INodeProperties } from 'n8n-workflow';
 
 // Opções da messages-api (Mensagens)
 export const messagesOperationsOptions: INodeProperties = {
-	displayName: 'Operação',
+	displayName: 'Operacion',
 	name: 'operation',
 	type: 'options',
 	noDataExpression: true,
