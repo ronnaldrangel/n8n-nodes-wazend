@@ -1,15 +1,15 @@
 import { INodeProperties } from 'n8n-workflow';
 
-// Campo das Eventos
+// Campo de los Eventos
 export const eventsFields: INodeProperties[] = [
 	// Campos = Webhook
 	{
-		displayName: 'Nome Da Instancia',
+		displayName: 'Nombre De La Instancia',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai enviar a mensagem',
+		description: 'Ingrese el nombre de la instancia que enviará el mensaje',
 		displayOptions: {
 			show: {
 				resource: ['events-api'],
@@ -18,7 +18,7 @@ export const eventsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'O Que Deseja Fazer',
+		displayName: 'Qué Desea Hacer',
 		name: 'resourceForWebhook',
 		type: 'options',
 		options: [
@@ -32,7 +32,7 @@ export const eventsFields: INodeProperties[] = [
 			},
 		],
 		default: 'setWebhook',
-		description: 'Escolha entre definir um novo webhook ou verificar o webhook',
+		description: 'Elija entre definir un nuevo webhook o verificar el webhook',
 		displayOptions: {
 			show: {
 				resource: ['events-api'],
@@ -41,7 +41,7 @@ export const eventsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ativar Webhook',
+		displayName: 'Activar Webhook',
 		name: 'enabled',
 		type: 'boolean',
 		default: true,
@@ -55,11 +55,11 @@ export const eventsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Url Do Webhook',
+		displayName: 'URL Del Webhook',
 		name: 'webhookUrl',
 		type: 'string',
 		default: '',
-		description: 'Digite a URL que vai receber os eventos do Webhook',
+		description: 'Ingrese la URL que recibirá los eventos del Webhook',
 		displayOptions: {
 			show: {
 				resource: ['events-api'],
@@ -84,7 +84,7 @@ export const eventsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Base64 No Webhook',
+		displayName: 'Base64 en El Webhook',
 		name: 'webhookBase64',
 		type: 'boolean',
 		default: false,
@@ -207,12 +207,12 @@ export const eventsFields: INodeProperties[] = [
 
 	// Campos = RabbitMQ
 	{
-		displayName: 'Nome Da Instancia',
+		displayName: 'Nombre De La Instancia',
 		name: 'instanceName',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Digite o nome da instância que vai enviar a mensagem',
+		description: 'Ingrese el nombre de la instancia que enviará el mensaje',
 		displayOptions: {
 			show: {
 				resource: ['events-api'],
@@ -221,7 +221,7 @@ export const eventsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'O Que Deseja Fazer',
+		displayName: 'Qué Desea Hacer',
 		name: 'resourceForRabbitMQ',
 		type: 'options',
 		options: [
@@ -235,7 +235,7 @@ export const eventsFields: INodeProperties[] = [
 			},
 		],
 		default: 'setRabbitMQ',
-		description: 'Escolha entre ativar/desativar RabbitMQ ou verificar o RabbitMQ',
+		description: 'Elija entre activar/desactivar RabbitMQ o verificar RabbitMQ',
 		displayOptions: {
 			show: {
 				resource: ['events-api'],
@@ -244,7 +244,7 @@ export const eventsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Ativar RabbitMQ',
+		displayName: 'Activar RabbitMQ',
 		name: 'enabled',
 		type: 'boolean',
 		default: true,
