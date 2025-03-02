@@ -24,7 +24,7 @@ export const profileOperationsOptions: INodeProperties = {
             action: 'Buscar perfil profesional',
         },
         {
-            name: 'Actualizar Nombre del Perfil',
+            name: 'Actualizar Nombre Del Perfil',
             value: 'update-profile-name',
             description: 'Actualiza el nombre del perfil',
             action: 'Actualizar nombre del perfil',
@@ -36,25 +36,25 @@ export const profileOperationsOptions: INodeProperties = {
             action: 'Actualizar estado del perfil',
         },
         {
-            name: 'Actualizar Foto del Perfil',
+            name: 'Actualizar Foto Del Perfil',
             value: 'update-profile-picture',
             description: 'Actualiza la foto del perfil',
             action: 'Actualizar foto del perfil',
         },
         {
-            name: 'Eliminar Foto del Perfil',
+            name: 'Eliminar Foto Del Perfil',
             value: 'remove-profile-picture',
             description: 'Elimina la foto del perfil',
             action: 'Eliminar foto del perfil',
         },
         {
-            name: 'Buscar Configuraciones de Privacidad',
+            name: 'Buscar Configuraciones De Privacidad',
             value: 'fetch-privacy-settings',
             description: 'Busca las configuraciones de privacidad de la instancia',
             action: 'Buscar configuraciones de privacidad',
         },
         {
-            name: 'Actualizar Configuraciones de Privacidad',
+            name: 'Actualizar Configuraciones De Privacidad',
             value: 'update-privacy-settings',
             description: 'Actualiza las configuraciones de privacidad de la instancia',
             action: 'Actualizar configuraciones de privacidad',

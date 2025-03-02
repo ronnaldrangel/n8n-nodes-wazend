@@ -11,35 +11,35 @@ import { resourceOperationsFunctions } from './execute';
 export class EvolutionApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Wazend API',
-		name: 'wazendApi',
-		icon: 'file:wazendapi.svg',
+		name: 'evolutionApi',
+		icon: 'file:evolutionapi.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Interact with Wazend API',
+		description: 'Interact with Evolution API',
 		defaults: {
-			name: 'Wazend API',
+			name: 'Evolution API',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
 		credentials: [
 			{
-				name: 'wazendApi',
+				name: 'evolutionApi',
 				required: true,
 			},
 		],
 		requestDefaults: {
-			baseURL: 'https://docs.wazend.net/wazend',
+			baseURL: 'https://doc.evolution-api.com/api-reference',
 			url: '',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
 			},
 		},
-		// La estructura de propiedades del nodo:
-		// • Recursos: Recursos disponibles (Instancia, Mensajes, Eventos, Integraciones)
-		// • Operaciones: Operaciones de cada recurso (Ej: Crear instancia, Enviar mensaje, Definir Webhook)
-		// • Campos: Campos de cada operación
+		// A estrutura de propriedades do nó:
+		// • Resources: Recursos disponíveis (Instancia, Mensagens, Eventos, Integrações)
+		// • Operations: Operações de cada recurso (Ex: Criar instancia, Enviar mensagem, Definir Webhook)
+		// • Fields: Campos de cada operação
 		properties: evolutionNodeProperties,
 	};
 
@@ -47,21 +47,21 @@ export class EvolutionApi implements INodeType {
 		const resource = this.getNodeParameter('resource', 0) as string;
 		const operation = this.getNodeParameter('operation', 0) as string;
 
-		// Busca la función para el recurso y la operación seleccionados
+		// Busca a função para o recurso e operação selecionados
 		const fn = resourceOperationsFunctions[resource][operation];
 
-		// Si no encuentra la función, retorna un error
+		// Se não encontrar a função, retorna um erro
 		if (!fn) {
 			throw new NodeApiError(this.getNode(), {
-				message: 'Operación no soportada.',
-				description: `La función "${operation}" para el recurso "${resource}" no es soportada!`,
+				message: 'Operação não suportada.',
+				description: `A função "${operation}" para o recurso "${resource}" não é suportada!`,
 			});
 		}
 
-		// Ejecuta la función
+		// Executa a função
 		const responseData = await fn(this);
 
-		// Retorna solo el JSON
+		// Retornar apenas o JSON
 		return [this.helpers.returnJsonArray(responseData)];
 	}
 }
