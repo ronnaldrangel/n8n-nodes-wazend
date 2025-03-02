@@ -1,0 +1,61 @@
+{
+  "name": "n8n-nodes-wazend",
+  "version": "1.0.3",
+  "description": "API no oficial de WhatsApp",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "author": {
+    "name": "Wazend",
+    "email": "soporte@wazend.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oriondesign2015/n8n-nodes-evolution-api.git"
+  },
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=9.1"
+  },
+  "packageManager": "pnpm@9.1.4",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/EvolutionApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/EvolutionApi/EvolutionApi.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "@typescript-eslint/parser": "^8.3.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^5.0.0",
+    "n8n-workflow": "*",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
+}
