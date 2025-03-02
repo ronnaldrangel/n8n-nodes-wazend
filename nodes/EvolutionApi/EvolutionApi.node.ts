@@ -11,7 +11,7 @@ import { resourceOperationsFunctions } from './execute';
 export class EvolutionApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Wazend API',
-		name: 'wazendApi',
+		name: 'evolutionApi',
 		icon: 'file:evolutionapi.svg',
 		group: ['transform'],
 		version: 1,
