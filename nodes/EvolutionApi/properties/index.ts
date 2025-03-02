@@ -43,10 +43,10 @@ const resourcesOptions: INodeProperties = {
 			name: 'Evento',
 			value: 'events-api',
 		},
-		{
-			name: 'Integración',
-			value: 'integrations-api',
-		},
+		// {
+		// 	name: 'Integración',
+		// 	value: 'integrations-api',
+		// },
 	],	
 	default: 'instances-api',
 };
